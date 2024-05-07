@@ -11,14 +11,14 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Nuestra_Fauna extends JFrame{
-    private JFrame ventana;
+public class Nuestra_Fauna extends JFrame {
     private JLabel etiquetaImagen;
     private List<ImageIcon> imagenes;
     private int indiceImagen;
 
     public Nuestra_Fauna() {
-        ventana = new JFrame("Nuestra Fauna");
+        super("Nuestra Fauna"); // Set the window title
+        setLocationRelativeTo(null); // Centrar el programa en la pantalla
         etiquetaImagen = new JLabel();
         imagenes = new ArrayList<>();
         indiceImagen = 0;
@@ -48,9 +48,10 @@ public class Nuestra_Fauna extends JFrame{
         panel.add(botonIzquierda, BorderLayout.WEST);
         panel.add(botonDerecha, BorderLayout.EAST);
 
-        ventana.setContentPane(panel);
-        ventana.pack();
-        ventana.setVisible(true);
+        setContentPane(panel);
+        setSize(800, 600); // Set a specific window size
+        setMinimumSize(getPreferredSize()); // Ensure minimum size
+        setVisible(true);
     }
 
     private void cargarImagenes() {
@@ -76,7 +77,7 @@ public class Nuestra_Fauna extends JFrame{
                     imagenes.add(new ImageIcon(imagenEscalada));
 
                 } catch (IOException e) {
-                    e.printStackTrace();
+                    JOptionPane.showMessageDialog(this, "Error loading image: " + archivo.getName(), "Error", JOptionPane.ERROR_MESSAGE);
                 }
             }
         }
@@ -100,6 +101,7 @@ public class Nuestra_Fauna extends JFrame{
 
     private void mostrarImagen() {
         etiquetaImagen.setIcon(imagenes.get(indiceImagen));
+        etiquetaImagen.setMinimumSize(etiquetaImagen.getPreferredSize());
     }
 
     public static void main(String[] args) {
