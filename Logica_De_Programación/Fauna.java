@@ -15,6 +15,7 @@ import java.util.List;
 public class Fauna {
     private List<ImageIcon> imagenes;
     private int indiceImagen;
+    //nueva actualización
 
     public Fauna() {
         imagenes = new ArrayList<>();
