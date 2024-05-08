@@ -12,7 +12,7 @@ public class Nuestra_Fauna extends JFrame {
 
     public Nuestra_Fauna() {
         super("Nuestra Fauna");
-        setLocationRelativeTo(null);
+                setLocationRelativeTo(null);
         etiquetaImagen = new JLabel();
         fauna = new Logica_De_Programación.Fauna();
         fauna.cargarImagenes("Fotos/fotos_animales");

@@ -60,14 +60,12 @@ public class Pantalla_Principal extends JFrame {
 
         // Agregar paneles de botones al panel principal
         panelPrincipal.add(panelBotonesArriba, BorderLayout.NORTH);
-        panelPrincipal.add(panelBotonesAbajo, BorderLayout.CENTER);
+        panelPrincipal.add(panelBotonesAbajo, BorderLayout.SOUTH);
 
-        // Agregar etiqueta (no visible)
-        panelPrincipal.add(etiquetaNuestraFauna, BorderLayout.SOUTH);
 
         // Configurar tamaños de botones
         int buttonWidth = 75;
-        int buttonHeight = 30;
+        int buttonHeight = 35;
 
         botonVerLugares.setPreferredSize(new Dimension(buttonWidth, buttonHeight));
         botonPlanearActividades.setPreferredSize(new Dimension(buttonWidth, buttonHeight));
