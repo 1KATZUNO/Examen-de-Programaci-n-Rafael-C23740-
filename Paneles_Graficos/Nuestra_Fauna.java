@@ -9,10 +9,11 @@ import java.awt.event.ActionListener;
 public class Nuestra_Fauna extends JFrame {
     private JLabel etiquetaImagen;
     private Logica_De_Programación.Fauna fauna;
+    
 
     public Nuestra_Fauna() {
         super("Nuestra Fauna");
-                setLocationRelativeTo(null);
+        this.setLocation(200,150);    
         etiquetaImagen = new JLabel();
         fauna = new Logica_De_Programación.Fauna();
         fauna.cargarImagenes("Fotos/fotos_animales");
@@ -63,5 +64,6 @@ public class Nuestra_Fauna extends JFrame {
 
     public static void main(String[] args) {
         new Nuestra_Fauna();
+    
     }
 }
