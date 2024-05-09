@@ -20,7 +20,7 @@ public class Pantalla_Principal extends JFrame {
         panelPrincipal = new JPanel();
         botonVerLugares = new JButton("VER LUGARES");
         botonPlanearActividades = new JButton("PLANEA ACTIVIDADES");
-      
+    
         botonAyuda = new JButton("AYUDA");
         botonNuestraFauna = new JButton("NUESTRA FAUNA"); // Renamed and updated text
 

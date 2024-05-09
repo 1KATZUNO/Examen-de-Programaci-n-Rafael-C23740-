@@ -18,21 +18,21 @@ public class Fauna {
 
     public Fauna() {
         imagenes = new ArrayList<>();
-        imagenes.add(new Imagen(new ImageIcon("Fotos/fotos_animales/armadillo.jpg"), "Nombre 1", "Estado 1", "Descripción 1"));
-        imagenes.add(new Imagen(new ImageIcon("chanchodemonte(peligro).jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
-        imagenes.add(new Imagen(new ImageIcon("danta.jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
-        imagenes.add(new Imagen(new ImageIcon("guacamayoverde(peligro).jpg.jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
-        imagenes.add(new Imagen(new ImageIcon("Jaguar_(Panthera_onca_palustris)_female_Piquiri_River_2.JPG"), "Nombre 2", "Estado 2", "Descripción 2"));
-        imagenes.add(new Imagen(new ImageIcon("manatí(peligro).jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
-        imagenes.add(new Imagen(new ImageIcon("monocapuccino.jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
-        imagenes.add(new Imagen(new ImageIcon("monocongo(peligro).jpg.jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
-        imagenes.add(new Imagen(new ImageIcon("ocelote(peligro).jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
-        imagenes.add(new Imagen(new ImageIcon("osoperezoso.jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
-        imagenes.add(new Imagen(new ImageIcon("pizote.jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
-        imagenes.add(new Imagen(new ImageIcon("ranaroja.jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
-        imagenes.add(new Imagen(new ImageIcon("TortugaGolfina(peligro).jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
-        imagenes.add(new Imagen(new ImageIcon("tortugaverde.jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
-        imagenes.add(new Imagen(new ImageIcon("venado.jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
+    imagenes.add(new Imagen(new ImageIcon("Fotos/fotos_animales/armadillo.jpg"), "Armadillo", "Estado: Sin peligro de extincion", "Descripción: Un animal muy amable"));
+        imagenes.add(new Imagen(new ImageIcon("Fotos/fotos_animales/chanchodemonte(peligro).jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
+        imagenes.add(new Imagen(new ImageIcon("Fotos/fotos_animales/danta.jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
+        imagenes.add(new Imagen(new ImageIcon("Fotos/fotos_animales/guacamayoverde(peligro).jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
+        imagenes.add(new Imagen(new ImageIcon("Fotos/fotos_animales/Jaguar_(Panthera_onca_palustris)_female_Piquiri_River_2.JPG"), "Nombre 2", "Estado 2", "Descripción 2"));
+        imagenes.add(new Imagen(new ImageIcon("Fotos/fotos_animales/manatí(peligro).jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
+        imagenes.add(new Imagen(new ImageIcon("Fotos/fotos_animales/monocapuccino.jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
+        imagenes.add(new Imagen(new ImageIcon("Fotos/fotos_animales/monocongo(peligro).jpg.jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
+        imagenes.add(new Imagen(new ImageIcon("Fotos/fotos_animales/ocelote(peligro).jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
+        imagenes.add(new Imagen(new ImageIcon("Fotos/fotos_animales/osoperezoso.jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
+        imagenes.add(new Imagen(new ImageIcon("Fotos/fotos_animales/pizote.jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
+        imagenes.add(new Imagen(new ImageIcon("Fotos/fotos_animales/ranaroja.jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
+        imagenes.add(new Imagen(new ImageIcon("Fotos/fotos_animales/TortugaGolfina(peligro).jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
+        imagenes.add(new Imagen(new ImageIcon("Fotos/fotos_animales/tortugaverde.jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
+        imagenes.add(new Imagen(new ImageIcon("Fotos/fotos_animales/venado.jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
      
         imagenes.add(new Imagen(new ImageIcon("imagen16.jpg"), "Nombre 16", "Estado 16", "Descripción 16"));
 
