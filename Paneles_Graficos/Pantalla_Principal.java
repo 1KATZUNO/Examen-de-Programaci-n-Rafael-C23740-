@@ -50,6 +50,14 @@ public class Pantalla_Principal extends JFrame {
                 dispose();
             }
         });
+        botonPlanearActividades.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                // Create a new instance of the Nuestra_Fauna class
+                Planear n = new Planear();
+                n.setVisible(true);
+                dispose();
+            }
+        });
 
         // Configurar tamaños de botones
         int buttonWidth = 75;

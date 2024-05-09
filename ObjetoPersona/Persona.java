@@ -4,8 +4,8 @@ public class Persona {
     private String Nombre;
     private int Cedula;
     public Persona(String nombre, int cedula) {
-        Nombre = nombre;
-        Cedula = cedula;
+        this.Nombre = nombre;
+        this.Cedula = cedula;
     }
     public String getNombre() {
         return Nombre;
