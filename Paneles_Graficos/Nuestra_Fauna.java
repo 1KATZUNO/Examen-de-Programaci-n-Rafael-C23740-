@@ -24,7 +24,7 @@ public class Nuestra_Fauna extends JFrame {
         etiquetaImagen.setPreferredSize(new Dimension(400, 300)); // Establece un tamaño máximo para la imagen
         this.pantallaPrincipal = pantallaPrincipal;
      
-        descripcionImagen = new JTextArea(5, 20); // Agrega un JTextArea para mostrar la descripción de la imagen
+        descripcionImagen = new JTextArea(8, 20); // Agrega un JTextArea para mostrar la descripción de la imagen
         descripcionImagen.setEditable(false); // No permite editar el texto
         fauna = new Fauna();
 
@@ -96,7 +96,7 @@ public class Nuestra_Fauna extends JFrame {
         ImageIcon imagen = fauna.getImagen();
         imagen.setImage(imagen.getImage().getScaledInstance(etiquetaImagen.getWidth(), etiquetaImagen.getHeight(), Image.SCALE_DEFAULT));
         etiquetaImagen.setIcon(imagen);
-        descripcionImagen.setText(fauna.getDescripcion()+"\n"+fauna.getNombre());
+        descripcionImagen.setText(fauna.getNombre()+"\n"+fauna.getEstado()+"\n"+fauna.getDescripcion());
     }
 
     public static void main(String[] args) {

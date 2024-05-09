@@ -65,28 +65,46 @@ public class Planear extends JFrame {
                          c.setVisible(true);
                                     dispose();
                     }
-                    if((String) provinciaBox.getSelectedItem()=="Limón"){
-
+                    if((String) provinciaBox.getSelectedItem().toString()=="Limón"){
+                        visitante.MLimón();
+                        Pantalla_Principal c = new Pantalla_Principal();
+                        c.setVisible(true);
+                                   dispose();
                         
                     }
-                    if((String) provinciaBox.getSelectedItem()=="Puntarenas"){
-
+                    if((String) provinciaBox.getSelectedItem().toString()=="Puntarenas"){
+                        visitante.MPuntarenas();
+                        Pantalla_Principal c = new Pantalla_Principal();
+                        c.setVisible(true);
+                                   dispose();
                         
                     }
-                    if((String) provinciaBox.getSelectedItem()=="Alajuela"){
-
+                    if((String) provinciaBox.getSelectedItem().toString()=="Alajuela"){
+                        visitante.MAlajuela();
+                        Pantalla_Principal c = new Pantalla_Principal();
+                        c.setVisible(true);
+                                   dispose();
                         
                     }
-                    if((String) provinciaBox.getSelectedItem()=="Heredia"){
-
+                    if((String) provinciaBox.getSelectedItem().toString()=="Heredia"){
+                        visitante.MHeredia();
+                        Pantalla_Principal c = new Pantalla_Principal();
+                        c.setVisible(true);
+                                   dispose();
                         
                     }
-                    if((String) provinciaBox.getSelectedItem()=="San José"){
-
+                    if((String) provinciaBox.getSelectedItem().toString()=="San José"){
+                        visitante.MSan_José();
+                        Pantalla_Principal c = new Pantalla_Principal();
+                        c.setVisible(true);
+                                   dispose();
                         
                     }
-                    if((String) provinciaBox.getSelectedItem()=="Cartago"){
-
+                    if((String) provinciaBox.getSelectedItem().toString()=="Cartago"){
+                        visitante.MCartago();
+                        Pantalla_Principal c = new Pantalla_Principal();
+                        c.setVisible(true);
+                                   dispose();
                         
                     }
                     

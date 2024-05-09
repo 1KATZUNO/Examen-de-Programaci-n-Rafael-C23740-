@@ -2,7 +2,7 @@ package Paneles_Graficos;
 
 import javax.swing.*;
 
-import Logica_De_Programación.ImagenLugar;
+
 import Logica_De_Programación.Lugares;
 
 import java.awt.*;
@@ -97,7 +97,7 @@ public class VerLugares extends JFrame {
         ImageIcon imagen = lugares.getImagen();
         imagen.setImage(imagen.getImage().getScaledInstance(etiquetaImagen.getWidth(), etiquetaImagen.getHeight(), Image.SCALE_DEFAULT));
         etiquetaImagen.setIcon(imagen);
-        descripcionImagen.setText(lugares.getDescripcion()+"\n"+lugares.getNombre());
+        descripcionImagen.setText(lugares.getNombre()+"\n"+lugares.getDescripcion());
     }
 
     public static void main(String[] args) {
