@@ -13,53 +13,62 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Fauna {
-    private List<ImageIcon> imagenes;
-    private int indiceImagen;
-    //nueva actualización
+    private List<Imagen> imagenes;
+    private int currentImageIndex;
 
     public Fauna() {
         imagenes = new ArrayList<>();
-        indiceImagen = 0;
-    }
+        imagenes.add(new Imagen(new ImageIcon("Fotos/fotos_animales/armadillo.jpg"), "Nombre 1", "Estado 1", "Descripción 1"));
+        imagenes.add(new Imagen(new ImageIcon("chanchodemonte(peligro).jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
+        imagenes.add(new Imagen(new ImageIcon("danta.jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
+        imagenes.add(new Imagen(new ImageIcon("guacamayoverde(peligro).jpg.jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
+        imagenes.add(new Imagen(new ImageIcon("Jaguar_(Panthera_onca_palustris)_female_Piquiri_River_2.JPG"), "Nombre 2", "Estado 2", "Descripción 2"));
+        imagenes.add(new Imagen(new ImageIcon("manatí(peligro).jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
+        imagenes.add(new Imagen(new ImageIcon("monocapuccino.jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
+        imagenes.add(new Imagen(new ImageIcon("monocongo(peligro).jpg.jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
+        imagenes.add(new Imagen(new ImageIcon("ocelote(peligro).jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
+        imagenes.add(new Imagen(new ImageIcon("osoperezoso.jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
+        imagenes.add(new Imagen(new ImageIcon("pizote.jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
+        imagenes.add(new Imagen(new ImageIcon("ranaroja.jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
+        imagenes.add(new Imagen(new ImageIcon("TortugaGolfina(peligro).jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
+        imagenes.add(new Imagen(new ImageIcon("tortugaverde.jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
+        imagenes.add(new Imagen(new ImageIcon("venado.jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
+     
+        imagenes.add(new Imagen(new ImageIcon("imagen16.jpg"), "Nombre 16", "Estado 16", "Descripción 16"));
 
-    public void cargarImagenes(String ruta) {
-        File carpeta = new File(ruta);
-        File[] archivos = carpeta.listFiles();
-
-        for (File archivo : archivos) {
-            if (archivo.isFile() && archivo.getName().endsWith(".jpg")) {
-                try {
-                    BufferedImage imagenOriginal = ImageIO.read(archivo);
-                    int ancho = 500;
-                    int alto = 500;
-                    BufferedImage imagenEscalada = new BufferedImage(ancho, alto, BufferedImage.TYPE_INT_RGB);
-                    Graphics2D g = imagenEscalada.createGraphics();
-                    g.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
-                    g.drawImage(imagenOriginal, 0, 0, ancho, alto, null);
-                    g.dispose();
-                    imagenes.add(new ImageIcon(imagenEscalada));
-                } catch (IOException e) {
-                    JOptionPane.showMessageDialog(null, "Error loading image: " + archivo.getName(), "Error", JOptionPane.ERROR_MESSAGE);
-                }
-            }
+        // Carga las imágenes en la lista de objetos Imagen
+        for (Imagen imagen : imagenes) {
+            imagen.getImagen().getImage().flush();
         }
     }
 
     public void siguienteImagen() {
-        indiceImagen++;
-        if (indiceImagen >= imagenes.size()) {
-            indiceImagen = 0;
+        currentImageIndex++;
+        if (currentImageIndex >= imagenes.size()) {
+            currentImageIndex = 0;
         }
     }
 
     public void anteriorImagen() {
-        indiceImagen--;
-        if (indiceImagen < 0) {
-            indiceImagen = imagenes.size() - 1;
+        currentImageIndex--;
+        if (currentImageIndex < 0) {
+            currentImageIndex = imagenes.size() - 1;
         }
     }
 
     public ImageIcon getImagen() {
-        return imagenes.get(indiceImagen);
+        return imagenes.get(currentImageIndex).getImagen();
+    }
+
+    public String getNombre() {
+        return imagenes.get(currentImageIndex).getNombre();
+    }
+
+    public String getEstado() {
+        return imagenes.get(currentImageIndex).getEstado();
+    }
+
+    public String getDescripcion() {
+        return imagenes.get(currentImageIndex).getDescripcion();
     }
 }
