@@ -42,6 +42,14 @@ public class Pantalla_Principal extends JFrame {
                 dispose();
             }
         });
+        botonVerLugares.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                // Create a new instance of the Nuestra_Fauna class
+                VerLugares nueva = new VerLugares();
+                nueva.setVisible(true);
+                dispose();
+            }
+        });
 
         // Configurar tamaños de botones
         int buttonWidth = 75;

@@ -12,14 +12,14 @@ public class Lugares {
 
     public Lugares() {
         imagenes = new ArrayList<>();
-    imagenes.add(new Imagen(new ImageIcon("Fotos/fotos_animales/armadillo.jpg"), "Armadillo", "Estado: Sin peligro de extincion", "Descripción: Un animal muy amable"));
-        imagenes.add(new Imagen(new ImageIcon("Fotos/fotos_animales/chanchodemonte(peligro).jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
-        imagenes.add(new Imagen(new ImageIcon("Fotos/fotos_animales/danta.jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
-        imagenes.add(new Imagen(new ImageIcon("Fotos/fotos_animales/guacamayoverde(peligro).jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
-        imagenes.add(new Imagen(new ImageIcon("Fotos/fotos_animales/Jaguar_(Panthera_onca_palustris)_female_Piquiri_River_2.JPG"), "Nombre 2", "Estado 2", "Descripción 2"));
-        imagenes.add(new Imagen(new ImageIcon("Fotos/fotos_animales/manatí(peligro).jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
-        imagenes.add(new Imagen(new ImageIcon("Fotos/fotos_animales/monocapuccino.jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
-        imagenes.add(new Imagen(new ImageIcon("Fotos/fotos_animales/monocongo(peligro).jpg.jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
+    imagenes.add(new Imagen(new ImageIcon("Fotos2/fotos_lugares/Barbilla.jpg"), "Armadillo", "Estado: Sin peligro de extincion", "Descripción: Un animal muy amable"));
+        imagenes.add(new Imagen(new ImageIcon("Fotos2/fotos_lugares/BarraHonda.jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
+        imagenes.add(new Imagen(new ImageIcon("Fotos2/fotos_lugares/BraulioCarrillo.jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
+        imagenes.add(new Imagen(new ImageIcon("Fotos2/fotos_lugares/IslaSanLucas.jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
+        imagenes.add(new Imagen(new ImageIcon("Fotos2/fotos_lugares/ManuelAntonio.jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
+        imagenes.add(new Imagen(new ImageIcon("Fotos2/fotos_lugares/MarinoLasBaulas.jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
+        imagenes.add(new Imagen(new ImageIcon("Fotos2/fotos_lugares/RincónDeLaVieja.jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
+        imagenes.add(new Imagen(new ImageIcon("Fotos2/fotos_lugares/VolcánIrazu.jpg"), "Nombre 2", "Estado 2", "Descripción 2"));
 
         // Carga las imágenes en la lista de objetos Imagen
         for (Imagen imagen : imagenes) {
