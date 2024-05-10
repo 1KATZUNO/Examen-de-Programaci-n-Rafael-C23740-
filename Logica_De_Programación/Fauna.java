@@ -17,6 +17,7 @@ public class Fauna {
     private int currentImageIndex;
 
     public Fauna() {
+        //funcion en donde se coloca el nombre de las imagenes, el estado del animal de la imagen y la descripcion del mismo
         imagenes = new ArrayList<>();
         imagenes.add(new Imagen(new ImageIcon("Fotos/fotos_animales/armadillo.jpg"), "Nombre: Armadillo", "Estado: Sin peligro de extincion", "Descripción: El armadillo es un mamífero de aspecto único cubierto por una armadura de placas óseas. \nSe encuentra principalmente en América Central y del Sur, y es conocido por su capacidad de enrollarse\n en una bola para protegerse de los depredadores."));
         imagenes.add(new Imagen(new ImageIcon("Fotos/fotos_animales/chanchodemonte(peligro).jpg"), "Nombre: Chancho de Monte", "Estado: Peligro de Extinción", "Descripción: El chancho de monte, también conocido como pecarí de labios blancos, es un mamífero perteneciente a la familia \nde los pecaríes, nativo de América Central y del Sur. Se caracteriza por su pelaje oscuro y cerdas blancas en los labios. \nVive en grupos sociales y se alimenta principalmente de frutas, semillas, insectos y pequeños vertebrados."));

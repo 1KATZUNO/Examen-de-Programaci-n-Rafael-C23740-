@@ -11,6 +11,7 @@ public class Lugares {
     private int currentImageIndex;
 
     public Lugares() {
+        // se muestran las imagenes y también las descripciones del lugar (estado "unused")
         imagenes = new ArrayList<>();
         imagenes.add(new Imagen(new ImageIcon("Fotos2/fotos_lugares/Barbilla.jpg"), "Nombre: Parque Nacional Barbilla", "Estado: Sin peligro de extincion", "Descripción: El Parque Nacional Barbilla es un parque nacional ubicado en la provincia de Limón, Costa Rica. \nEs un lugar ideal para la observación de aves y la práctica de actividades al aire libre."));
         imagenes.add(new Imagen(new ImageIcon("Fotos2/fotos_lugares/BarraHonda.jpg"), "Nombre: Parque Nacional Barra Honda", "Estado: Sin peligro de extincion", "Descripción: El Parque Nacional Barra Honda es un parque nacional ubicado en la provincia de Guanacaste, Costa Rica. \nEs un lugar ideal para la práctica de actividades de aventura y la observación de la naturaleza."));
@@ -26,7 +27,7 @@ public class Lugares {
             imagen.getImagen().getImage().flush();
         }
     }
-
+//metodo para cambiar de imagen
     public void siguienteImagen() {
         currentImageIndex++;
         if (currentImageIndex >= imagenes.size()) {

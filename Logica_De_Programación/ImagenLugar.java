@@ -6,7 +6,7 @@ import javax.swing.ImageIcon;
  * Principal
  */
 public class ImagenLugar {
-
+// objeto imagen para luego pasar a diferentes variables y trabajar con el nopmbre de la imagen y la descripcion de la misma
           private ImageIcon imagen;
    private String nombre;
 

@@ -8,6 +8,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * Esta clase representa el marco principal para mostrar imágenes y información sobre varias especies de fauna.
+ */
 public class Nuestra_Fauna extends JFrame {
     private JLabel etiquetaImagen;
     
@@ -16,8 +19,11 @@ public class Nuestra_Fauna extends JFrame {
     private int currentImageIndex;
     private Pantalla_Principal pantallaPrincipal;
 
+    /**
+     * Constructor para la clase Nuestra_Fauna.
+     */
     public Nuestra_Fauna() {
-        
+
         super("Nuestra Fauna");
         this.setLocation(200,100);    
         etiquetaImagen = new JLabel();
@@ -32,6 +38,9 @@ public class Nuestra_Fauna extends JFrame {
         JButton botonDerecha = new JButton("►");
         JButton botonRegresar = new JButton("Regresar");
 
+        /**
+         * Agrega un ActionListener al botón izquierdo para mostrar la imagen anterior.
+         */
         botonIzquierda.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -39,6 +48,9 @@ public class Nuestra_Fauna extends JFrame {
             }
         });
 
+        /**
+         * Agrega un ActionListener al botón derecho para mostrar la imagen siguiente.
+         */
         botonDerecha.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -46,12 +58,15 @@ public class Nuestra_Fauna extends JFrame {
             }
         });
 
-       botonRegresar.addActionListener(new ActionListener() {
+        /**
+         * Agrega un ActionListener al botón de regresar para volver a la pantalla principal.
+         */
+        botonRegresar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Pantalla_Principal c = new  Pantalla_Principal();
                 c.setVisible(true);
-                dispose(); // Close the current window
+                dispose(); // Cierra la ventana actual
             
             }
         });
@@ -63,7 +78,7 @@ public class Nuestra_Fauna extends JFrame {
         panel.add(descripcionImagen, BorderLayout.SOUTH);
         panel.add(botonIzquierda, BorderLayout.WEST);
         panel.add(botonDerecha, BorderLayout.EAST);
-        panel.add(botonRegresar, BorderLayout.NORTH); // Add the button to the top of the panel
+        panel.add(botonRegresar, BorderLayout.NORTH); // Agrega el botón a la parte superior del panel
 
         setContentPane(panel);
         setSize(800, 650);
@@ -74,15 +89,9 @@ public class Nuestra_Fauna extends JFrame {
         mostrarImagen();
     }
 
-    private void siguienteImagen() {
-        fauna.siguienteImagen();
-        currentImageIndex++;
-        if (currentImageIndex >= 16) {
-            currentImageIndex = 0;
-        }
-        mostrarImagen();
-    }
-
+    /**
+     * Muestra la imagen anterior en la colección de fauna.
+     */
     private void anteriorImagen() {
         fauna.anteriorImagen();
         currentImageIndex--;
@@ -92,6 +101,21 @@ public class Nuestra_Fauna extends JFrame {
         mostrarImagen();
     }
 
+    /**
+     * Muestra la imagen siguiente en la colección de fauna.
+     */
+    private void siguienteImagen() {
+        fauna.siguienteImagen();
+        currentImageIndex++;
+        if (currentImageIndex >= 16) {
+            currentImageIndex = 0;
+        }
+        mostrarImagen();
+    }
+
+    /**
+     * Muestra la imagen actual y su descripción.
+     */
     private void mostrarImagen() {
         ImageIcon imagen = fauna.getImagen();
         imagen.setImage(imagen.getImage().getScaledInstance(etiquetaImagen.getWidth(), etiquetaImagen.getHeight(), Image.SCALE_DEFAULT));
@@ -99,6 +123,9 @@ public class Nuestra_Fauna extends JFrame {
         descripcionImagen.setText(fauna.getNombre()+"\n"+fauna.getEstado()+"\n"+fauna.getDescripcion());
     }
 
+    /**
+     * Método principal para lanzar la aplicación.
+     */
     public static void main(String[] args) {
        new Nuestra_Fauna();
     }

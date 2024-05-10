@@ -8,3 +8,7 @@ que muestra algunos tipos de animales que hay en Costa Rica,
 animales que hay en peligro de extinción y tambien muestra lugares
 verdes, lugares para actividades en familia y mas cosas de 
 Bio diversidad.
+
+
+
+-Se inicia desde IniciarPrograma

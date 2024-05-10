@@ -50,20 +50,23 @@ public class Planear extends JFrame {
                  visitante.setNombre(nombre);
                  String lugar = (String) provinciaBox.getSelectedItem();
                  visitante.setLugarDeseado(lugar);
-                   
+                   // si no estan llenos los campos entonces no se puede avanzar
                 if(txtnombre.getText().isEmpty()||txtcedula.getText().isEmpty()){
 
                     JOptionPane.showMessageDialog(null, "Rellene todos los campos");
                 }
-                
+                //cuando se hayan registrado los datos avanzamos y dependindiendo de cual provincia sea o elija, se le muestran lugares a visitar
                 else{
                
                     if((String) provinciaBox.getSelectedItem().toString()=="Guanacaste"){
-
+                         // esta parte y todas las siguientes lo que hacen es llamar a la logica de programación colocada en Visitante, donde muestran datos
                          visitante.MGuanacaste();
                          Pantalla_Principal c = new Pantalla_Principal();
                          c.setVisible(true);
                                     dispose();
+                                     // cuando se da a aceptar en el botón y es valido entonces se cierra la ventana y abre la principal
+
+                                     // todos los demás hacen lo mismo pero con diferente 
                     }
                     if((String) provinciaBox.getSelectedItem().toString()=="Limón"){
                         visitante.MLimón();
@@ -110,7 +113,7 @@ public class Planear extends JFrame {
                     
                 }
 
-               // JOptionPane.showMessageDialog(null, "Nombre: " + nombre + "\nCédula: " + cedula + "\nProvincia: " + provincia);
+             
             }
         });
         add(aceptarButton);
@@ -128,6 +131,5 @@ public class Planear extends JFrame {
     }
 }
 
-/*String nombre = nombreField.getText();
-            String cedula = cedulaField.getText();
-            String provincia = (String) provinciaBox.getSelectedItem(); */
+
+
