@@ -1,6 +1,14 @@
 package Paneles_Graficos;
 
+import Clases.ConexionDB;
 import Clases.consultas;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+import Paneles_Graficos.*;
 
 public class Login extends javax.swing.JFrame {
 
@@ -14,6 +22,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPasswordField txtContraseñaUsuario;
     private javax.swing.JTextField txtNombreUsuario;
+    String usuario;
+         String password;
      
     public Login() {
         initComponents();
@@ -151,9 +161,63 @@ public class Login extends javax.swing.JFrame {
 
 
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {                                            
-        consultas con = new consultas();
-        con.consultarUsuario(txtNombreUsuario.getText(), txtContraseñaUsuario.getText().toString());
-      }        
+       // consultas con = new consultas();
+        consultarUsuario(txtNombreUsuario.getText(), txtContraseñaUsuario.getText().toString());
+        
+
+
+        ConexionDB db = new ConexionDB();
+        String sql = "insert into dadada(nombre, clave) values ('" + usuario +"', '" + password +"');";
+        Statement st;
+        Connection conexion = db.conectar();
+        try
+        {
+            st = conexion.createStatement();
+            int rs = st.executeUpdate(sql);
+            JOptionPane.showMessageDialog(null, "Guardado correctamente");
+        }catch(SQLException e)
+        {
+            System.out.println(e);
+        }
+    }
+    
+    public void consultarUsuario(String user, String pass)
+    {
+        // TODO add your handling code here:
+        ConexionDB db = new ConexionDB();
+        // Se inicializa a null
+        String usuarioCorrecto = null;
+        String passCorrecto = null;
+    try {
+
+        Connection cn = db.conectar();
+        PreparedStatement pst = cn.prepareStatement("SELECT nombre, clave FROM dadada");
+        ResultSet rs = pst.executeQuery();
+
+        if (rs.next()) {
+            usuarioCorrecto = rs.getString(1);
+            passCorrecto = rs.getString(2);
+        }
+
+        if (user.equals(usuarioCorrecto) && pass.equals(passCorrecto)) {
+            JOptionPane.showMessageDialog(null, "Login correcto Bienvenido " + user);
+            Pantalla_Principal x = new Pantalla_Principal();
+            x.setVisible(true);
+            dispose();
+            
+
+            
+        } else if (!user.equals(usuarioCorrecto) || pass.equals(passCorrecto)) {
+
+            JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrectos");
+        }
+
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(null, "Error " + e);
+    }
+    }
+    
+     
 
       private void txtNombreUsuarioActionPerformed(java.awt.event.ActionEvent evt) {                                                 
         // ppppppppppp

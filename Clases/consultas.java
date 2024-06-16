@@ -27,7 +27,7 @@ public class consultas {
     
     public void consultarUsuario(String user, String pass)
     {
-        // TODO add your handling code here:
+        
         ConexionDB db = new ConexionDB();
         // Se inicializa a null
         String usuarioCorrecto = null;
@@ -45,10 +45,10 @@ public class consultas {
 
         if (user.equals(usuarioCorrecto) && pass.equals(passCorrecto)) {
             JOptionPane.showMessageDialog(null, "Login correcto Bienvenido " + user);
+            
             Pantalla_Principal x = new Pantalla_Principal();
             x.setVisible(true);
-            Login p = new Login();
-            p.setVisible(false);
+            
 
             
         } else if (!user.equals(usuarioCorrecto) || pass.equals(passCorrecto)) {

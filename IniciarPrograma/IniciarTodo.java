@@ -1,11 +1,11 @@
 package IniciarPrograma;
 
-import Paneles_Graficos.Pantalla_Principal;
+import Paneles_Graficos.*;
 
 public class IniciarTodo {
    // iniciamos el programa desde aquí
     public static void main(String[] args) {
-      Pantalla_Principal a = new Pantalla_Principal();
+      Login a = new Login();
       a.setVisible(true);  
 
 
