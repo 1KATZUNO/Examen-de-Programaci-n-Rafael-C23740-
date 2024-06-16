@@ -6,11 +6,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
+import Paneles_Graficos.*;
 
 public class consultas {
     public void guardarUsuario(String usuario, String password){
         ConexionDB db = new ConexionDB();
-        String sql = "insert into usuarios(nombre, clave) values ('" + usuario +"', '" + password +"');";
+        String sql = "insert into dadada(nombre, clave) values ('" + usuario +"', '" + password +"');";
         Statement st;
         Connection conexion = db.conectar();
         try
@@ -34,7 +35,7 @@ public class consultas {
     try {
 
         Connection cn = db.conectar();
-        PreparedStatement pst = cn.prepareStatement("SELECT nombre, clave FROM usuarios");
+        PreparedStatement pst = cn.prepareStatement("SELECT nombre, clave FROM dadada");
         ResultSet rs = pst.executeQuery();
 
         if (rs.next()) {
@@ -44,6 +45,12 @@ public class consultas {
 
         if (user.equals(usuarioCorrecto) && pass.equals(passCorrecto)) {
             JOptionPane.showMessageDialog(null, "Login correcto Bienvenido " + user);
+            Pantalla_Principal x = new Pantalla_Principal();
+            x.setVisible(true);
+            Login p = new Login();
+            p.setVisible(false);
+
+            
         } else if (!user.equals(usuarioCorrecto) || pass.equals(passCorrecto)) {
 
             JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrectos");

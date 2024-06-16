@@ -152,7 +152,7 @@ public class Login extends javax.swing.JFrame {
 
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {                                            
         consultas con = new consultas();
-        con.consultarUsuario(txtNombreUsuario.getText(), txtContraseñaUsuario.getText());
+        con.consultarUsuario(txtNombreUsuario.getText(), txtContraseñaUsuario.getText().toString());
       }        
 
       private void txtNombreUsuarioActionPerformed(java.awt.event.ActionEvent evt) {                                                 
