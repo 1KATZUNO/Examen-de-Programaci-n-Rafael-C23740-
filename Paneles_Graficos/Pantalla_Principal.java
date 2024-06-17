@@ -70,7 +70,7 @@ public class Pantalla_Principal extends javax.swing.JFrame {
             }
         });
 
-        botonMenuUsuario.setText("Menú Usuario");
+        botonMenuUsuario.setText("Derechos Autor");
         botonMenuUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonMenuUsuarioActionPerformed(evt);
@@ -86,7 +86,7 @@ public class Pantalla_Principal extends javax.swing.JFrame {
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/lista-de-quehaceres.png"))); // NOI18N
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/agregar-usuario.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/derechos-de-autor.png"))); // NOI18N
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fauna-silvestre.png"))); // NOI18N
 

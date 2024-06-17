@@ -4,16 +4,14 @@ import javax.swing.JFrame;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
-
-
 import ObjetoPersona.Visitante;
-
 import javax.swing.JButton;
 import java.awt.GridLayout;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
+import Logica_De_Programación.*;
 
 public class Planear extends JFrame {
     
@@ -46,10 +44,16 @@ public class Planear extends JFrame {
         aceptarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+          
                  String nombre=txtnombre.getText();
                  visitante.setNombre(nombre);
+                 String cedulax=txtcedula.getText();
+                 int cedula=Integer.parseInt(cedulax);
                  String lugar = (String) provinciaBox.getSelectedItem();
-                 visitante.setLugarDeseado(lugar);
+                 
+
+          
+                
                    // si no estan llenos los campos entonces no se puede avanzar
                 if(txtnombre.getText().isEmpty()||txtcedula.getText().isEmpty()){
 
