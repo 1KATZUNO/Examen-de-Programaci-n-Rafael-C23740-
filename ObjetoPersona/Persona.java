@@ -3,9 +3,9 @@ package ObjetoPersona;
 // Esta clase representa una persona con un nombre y un número de cédula
 public class Persona {
     // El nombre de la persona
-    public String Nombre;
+    protected String Nombre;
     // El número de cédula de la persona
-    public int Cedula;
+    protected int Cedula;
 
     // Este constructor inicializa el nombre y el número de cédula de la persona
     public Persona(String nombre, int cedula) {

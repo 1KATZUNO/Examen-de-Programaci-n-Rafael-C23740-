@@ -12,7 +12,7 @@ public class Visitante extends Persona {
     // Constructor
     public Visitante(String nombre, int cedula, String lugarDeseado, int cantidadmiembros) {
         super(nombre, cedula);
-        LugarDeseado = lugarDeseado;
+        this.LugarDeseado = lugarDeseado;
         this.cantidadmiembros = cantidadmiembros;
         this.dbManager = new DatabaseManager();
     }
@@ -38,8 +38,8 @@ public class Visitante extends Persona {
     private void mostrarLugares(String mensaje, String[] lugares) {
         try {
             dbManager.connect();
-            String SQL = "INSERT INTO estudiantes (nombre, cedula, lugar) VALUES ('" + Nombre + "', '" + Cedula + "', '" + LugarDeseado + "');";
-            int exito = dbManager.executeUpdate(SQL);
+            String SQL = "INSERT INTO datos (nombre, cedula, lugar) VALUES (?, ?, ?);";
+            int exito = dbManager.executeUpdate(SQL, new Object[]{getNombre(), getCedula(), getLugarDeseado()});
             if (exito != 0) {
                 ResultSet rs = dbManager.executeQuery("SELECT * FROM datos;");
                 displayRow("datos", rs);
@@ -106,3 +106,4 @@ public class Visitante extends Persona {
         }
     }
 }
+

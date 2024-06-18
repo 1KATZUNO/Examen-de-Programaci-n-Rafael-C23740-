@@ -50,6 +50,8 @@ public class Planear extends JFrame {
                  String cedulax=txtcedula.getText();
                  int cedula=Integer.parseInt(cedulax);
                  String lugar = (String) provinciaBox.getSelectedItem();
+                 visitante.setCedula(cedula);
+                 visitante.setLugarDeseado(lugar);
                  
 
           
