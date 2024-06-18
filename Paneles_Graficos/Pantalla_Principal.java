@@ -220,7 +220,9 @@ public class Pantalla_Principal extends javax.swing.JFrame {
     }                                               
 
     private void botonMenuUsuarioActionPerformed(java.awt.event.ActionEvent evt) {                                                 
-     
+        CopyR n = new CopyR();
+        n.setVisible(true);
+        dispose();
     }                                                
 
     private void botonPlanearActividadesActionPerformed(java.awt.event.ActionEvent evt) {                                                        
