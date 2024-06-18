@@ -1,4 +1,4 @@
-package Clases;
+package ConexiónMySql;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

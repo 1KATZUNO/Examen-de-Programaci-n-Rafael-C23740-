@@ -9,6 +9,7 @@ public class Pantalla_Principal extends javax.swing.JFrame {
     private javax.swing.JButton botonNuestraFauna;
     private javax.swing.JButton botonPlanearActividades;
     private javax.swing.JButton botonVerLugares;
+    private javax.swing.JButton botonSalir;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -39,6 +40,7 @@ public class Pantalla_Principal extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        botonSalir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -70,7 +72,7 @@ public class Pantalla_Principal extends javax.swing.JFrame {
             }
         });
 
-        botonMenuUsuario.setText("Derechos Autor");
+        botonMenuUsuario.setText("Menú Usuario");
         botonMenuUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonMenuUsuarioActionPerformed(evt);
@@ -95,6 +97,13 @@ public class Pantalla_Principal extends javax.swing.JFrame {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/plan-de-negocios.png"))); // NOI18N
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/lugar.png"))); // NOI18N
+
+        botonSalir.setText("Salir");
+        botonSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonSalirActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -137,7 +146,10 @@ public class Pantalla_Principal extends javax.swing.JFrame {
                         .addComponent(botonMenuUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(350, 350, 350)
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(212, 212, 212)
+                        .addComponent(botonSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(65, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -166,7 +178,9 @@ public class Pantalla_Principal extends javax.swing.JFrame {
                         .addGap(270, 270, 270)
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(290, 290, 290)
+                        .addGap(21, 21, 21)
+                        .addComponent(botonSalir)
+                        .addGap(245, 245, 245)
                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(70, 70, 70)
@@ -192,7 +206,11 @@ public class Pantalla_Principal extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>                        
+    }// </editor-fold>  
+    
+    private void botonSalirActionPerformed(java.awt.event.ActionEvent evt) {                                           
+        System.exit(0);
+    }  
 
     private void botonVerLugaresActionPerformed(java.awt.event.ActionEvent evt) {                                                
      
