@@ -225,7 +225,9 @@ public class Pantalla_Principal extends javax.swing.JFrame {
     }                                                 
 
     private void botonEditActionPerformed(java.awt.event.ActionEvent evt) {                                          
-        
+        Editar_Actividades e = new Editar_Actividades();
+        e.setVisible(true);
+        dispose();
     }                                         
 
    
