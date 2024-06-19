@@ -1,4 +1,4 @@
-package Logica_De_Programación;
+package ConexiónMySql;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

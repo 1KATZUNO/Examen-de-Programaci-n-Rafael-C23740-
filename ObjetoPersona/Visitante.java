@@ -1,6 +1,9 @@
 package ObjetoPersona;
 
 import javax.swing.JOptionPane;
+
+import ConexiónMySql.DatabaseManager;
+
 import java.sql.ResultSet;
 
 public class Visitante extends Persona {
